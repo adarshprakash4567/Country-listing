@@ -57,7 +57,7 @@ const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
     <div className="min-h-screen flex items-center justify-center  px-4 py-10">
       <div className="flex flex-col md:flex-row  rounded-2xl overflow-hidden w-full max-w-5xl">
         {/* Left - Form */}
-        <div className="w-full md:w-[45%] p-10 flex flex-col justify-center">
+        <div className="w-full md:w-[65%] p-10 flex flex-col justify-center gap-4">
           <h2 className="text-3xl font-bold mb-3">Sign In</h2>
           <p className="text-sm text-[#3D3D3D] mb-6">
             New user?{' '}
@@ -139,11 +139,11 @@ const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
         </div>
 
         {/* Right - Image */}
-        <div className="w-full md:w-full  hidden md:flex items-center justify-center p-6">
+        <div className="w-full md:w-full  hidden md:flex items-center justify-center p-6 ml-[5rem]">
           <img
-            src="https://img.freepik.com/free-vector/online-resume-concept-illustration_114360-5166.jpg?ga=GA1.1.843719782.1716809529&semt=ais_hybrid&w=740"
+            src="https://thebrokersocial.com/wp-content/uploads/2023/08/Sign-In.png"
             alt="Login illustration"
-            className="w-full max-w-md object-cover rounded-xl"
+            className="w-full max-w-[25rem] object-cover rounded-xl"
           />
         </div>
       </div>
