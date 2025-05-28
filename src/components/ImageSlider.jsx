@@ -60,7 +60,7 @@ const ImageSlider = () => {
         </div>
 
         {/* Static Image (on top in mobile) */}
-        <div className="w-full md:w-[300px] h-64 md:h-96 bg-gray-100 rounded-lg flex items-center justify-center">
+        <div className="w-full md:w-1/2 h-64 md:h-96 bg-gray-100 rounded-lg flex items-center justify-center">
           <img
             src={img5}
             alt="Side Preview"
