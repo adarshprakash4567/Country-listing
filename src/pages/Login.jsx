@@ -27,8 +27,8 @@ const Login = () => {
     if (!formData.username.trim()) {
       newErrors.username = 'Username or email is required';
     }
-    const passwordRegex =
-      /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
+
 
     if (!formData.password) {
       newErrors.password = 'Password is required';

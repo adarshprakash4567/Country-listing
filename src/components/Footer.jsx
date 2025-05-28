@@ -4,9 +4,9 @@ import { FaGoogle, FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 const Footer = () => {
   return (
          <div className="flex justify-center gap-4">
-             {[FaGoogle, FaFacebookF, FaLinkedinIn, FaTwitter].map((Icon, index) => (
+             {[FaGoogle, FaFacebookF, FaLinkedinIn, FaTwitter].map((Icon) => (
                <button
-                 key={index}
+                 key={Icon}
                  className="p-3 rounded-full border border-gray-300 hover:bg-gray-100 transition duration-200"
                >
                  <Icon className="text-gray-600 text-lg" />

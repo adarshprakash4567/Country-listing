@@ -1,18 +1,9 @@
+import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  nextSlide,
-  prevSlide,
-  setCurrent,
-} from "../features/countries/countrySlice";
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img4.jpg";
-import img3 from "../assets/img3.jpg";
-import img5 from "../assets/img5.jpg";
-const ImageSlider = () => {
-  const dispatch = useDispatch();
 
+const ImageSlider = ({ images, sideImage,prevSlide,nextSlide }) => {
+  const dispatch = useDispatch();
   const { current } = useSelector((state) => state.countries);
-  const images = [img1, img2, img3];
 
   return (
     <div>
@@ -25,7 +16,7 @@ const ImageSlider = () => {
           >
             {images.map((img, i) => (
               <img
-                key={i}
+                key={img}
                 src={img}
                 alt={`Slide ${i + 1}`}
                 className="w-full flex-shrink-0 h-64 md:h-96 object-contain"
@@ -41,9 +32,9 @@ const ImageSlider = () => {
             >
               ‹
             </button>
-            {images.map((_, i) => (
+            {images.map((img, i) => (
               <button
-                key={i}
+                key={img}
                 onClick={() => dispatch(setCurrent(i))}
                 className={`w-3 h-3 rounded-full ${
                   i === current ? "bg-black" : "bg-pink-100"
@@ -59,10 +50,10 @@ const ImageSlider = () => {
           </div>
         </div>
 
-        {/* Static Image (on top in mobile) */}
+        {/* Static Side Image */}
         <div className="w-full md:w-1/2 h-64 md:h-96 bg-gray-100 rounded-lg flex items-center justify-center">
           <img
-            src={img5}
+            src={sideImage}
             alt="Side Preview"
             className="w-full h-full object-cover rounded-lg"
           />
@@ -71,5 +62,11 @@ const ImageSlider = () => {
     </div>
   );
 };
+ImageSlider.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  sideImage: PropTypes.string.isRequired,
+  prevSlide:PropTypes.string.isRequired,
+  nextSlide:PropTypes.string.isRequired
 
+};
 export default ImageSlider;

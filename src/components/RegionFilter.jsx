@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setRegion } from "../features/countries/countrySlice";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import PropTypes from "prop-types";
 
 export default function RegionFilter({ regions }) {
   const dispatch = useDispatch();
@@ -91,3 +92,7 @@ export default function RegionFilter({ regions }) {
     </div>
   );
 }
+RegionFilter.propTypes = {
+  regions:PropTypes.string.isRequired
+
+};
