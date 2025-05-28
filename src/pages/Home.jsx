@@ -89,7 +89,7 @@ export default function Home() {
       <div className="mt-2">
         <Footer className="mb-2" />
         <div className="flex flex-col gap-2 text-gray-500 text-center mt-2 font-semibold">
-          <h4>Example@gmail.com</h4>
+          <h4 className="no-underline">Example@gmail.com</h4>
           <h4>Copyright © 2020 Name. All rights reserved.</h4>
         </div>
       </div>

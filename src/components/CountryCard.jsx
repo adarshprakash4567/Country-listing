@@ -9,8 +9,8 @@ const CountryCard = ({ country }) => {
         className="h-24 w-24 object-cover p-4"
       />
       <div className="p-4 flex flex-col justify-center">
-        <h5 className="text-lg font-semibold">{country.name}</h5>
-        <p className="text-gray-500">{country.region}</p>
+        <h5 className="text-lg font-semibold text-[#3D3D3D]">{country.name}</h5>
+        <p className="text-[#6F6F6F]">{country.region}</p>
       </div>
     </div>
   );

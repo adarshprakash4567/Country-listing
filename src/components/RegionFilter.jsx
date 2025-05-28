@@ -17,7 +17,7 @@ export default function RegionFilter({ regions }) {
     >
         
 <h2
-  className={`text-gray-600 font-bold text-[24px] leading-[34px] tracking-[0] ${
+  className={`text-[#3D3D3D] font-bold text-[24px] leading-[34px] tracking-[0] ${
     open ? "hidden" : ""
   }`}
 >
