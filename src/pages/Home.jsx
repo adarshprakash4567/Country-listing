@@ -14,6 +14,7 @@ import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img4.jpg';
 import img3 from '../assets/img3.jpg';
 import img5 from '../assets/img5.jpg';
+import ImageSlider from "../components/ImageSlider";
 
 
 export default function Home() {
@@ -56,54 +57,7 @@ if (status === "loading") {
   <h1 className="text-center text-3xl font-semibold">Welcome</h1>
 </div>
                                                         
-
-      <div className="flex flex-row gap-3">
-        <div className="relative w-[80%] max-w-5xl mx-auto overflow-hidden rounded-lg p-6">
-          <div
-            className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${current * 100}%)` }}
-          >
-            {images.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt={`Slide ${i + 1}`}
-                className="w-full flex-shrink-0 h-64 md:h-96 object-contain"
-              />
-            ))}
-          </div>
-
-          {/* Navigation & Dots */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 gap-[2rem]">
-            <button
-              onClick={() => dispatch(prevSlide())}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-white/70 rounded-full shadow-md hover:bg-white ml-[-2rem]"
-            >
-              ‹
-            </button>
-            {images.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => dispatch(setCurrent(i))}
-                className={`w-3 h-3 rounded-full ${i === current ? "bg-blue-600" : "bg-gray-300"}`}
-              />
-            ))}
-            <button
-              onClick={() => dispatch(nextSlide())}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-white/70 rounded-full shadow-md hover:bg-white"
-              style={{ marginRight: "-2rem" }}
-            >
-              ›
-            </button>
-          </div>
-        </div>
-        <div>
-          <img
-  src={img5}
-            className="w-full flex-shrink-0 h-64 md:h-96 object-cover"
-          />
-        </div>
-      </div>
+<ImageSlider/>
 
       {/* Country Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-3">
