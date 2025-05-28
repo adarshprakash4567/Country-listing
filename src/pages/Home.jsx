@@ -52,9 +52,17 @@ export default function Home() {
       <RegionFilter regions={regions} />
       {/* </div> */}
 
-      <div className="py-4 mb-6 border-t-2 border-b-2 border-[#3D3D3D]  md:border-none">
-        <h1 className="text-center text-3xl font-semibold">Welcome</h1>
-      </div>
+<div className="flex flex-col items-center space-y-2 my-8">
+  <div className="flex items-center w-full max-md:hidden">
+    <div className="flex-grow border-t-2 border-gray-600 mt-[-18px] mr-2"></div>
+    <h1 className="text-center text-3xl font-semibold text-[#3D3D3D]">WELCOME</h1>
+    <div className="flex-grow border-t-2 border-gray-600 mt-[18px] ml-2"></div>
+  </div>
+
+  <div className="md:hidden border-t-2 border-b-2 border-[#3D3D3D] py-4 mb-6 w-full">
+    <h1 className="text-center text-3xl font-semibold text-[#3D3D3D]">Welcome</h1>
+  </div>
+</div>
 
       <div>
         <ImageSlider images={sliderImages} sideImage={sideImage} prevSlide={prevSlide} nextSlide={nextSlide}/>
